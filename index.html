@@ -31,6 +31,45 @@
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
+        /* Tombol Kembali Melayang (Floating Back Button) */
+        .btn-back-portal {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: #005A2B;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 90, 43, 0.3);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        .btn-back-portal:hover {
+            background-color: #004220;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 90, 43, 0.4);
+        }
+        .btn-back-portal svg {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.3s ease;
+        }
+        .btn-back-portal:hover svg {
+            transform: translateX(-3px);
+        }
+
         /* Bingkai aplikasi utama yang memenuhi layar */
         iframe {
             width: 100%;
@@ -48,6 +87,7 @@
         <h3 style="color: #1E293B; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em;">WELCOME TO SATRIA</h3>
         <p style="color: #64748B; font-size: 11px; margin-top: 4px;">Aplikasi Pendaftaran Praktik Kerja Lapangan MAN 1 Kota Cirebon</p>
     </div>
+
     <!-- TOMBOL KEMBALI MENGGUNAKAN DOMAIN KUSTOM & TARGET="_TOP" -->
     <a href="https://yfaksara.my.id/" target="_top" class="btn-back-portal">
         <svg viewBox="0 0 24 24">
